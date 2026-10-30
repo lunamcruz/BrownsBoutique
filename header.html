@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown's Boutique</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="top-bar">
+        <div class="top-bar-item">
+            <i class="fas fa-truck"></i> Entregas en Zacatlán y alrededores
+        </div>
+        <div class="top-bar-item">
+            <i class="fas fa-sparkles"></i> Productos originales
+        </div>
+        <div class="top-bar-item">
+            <i class="fas fa-gift"></i> ¡Encuentra el regalo perfecto!
+        </div>
+    </div>
+
+    <div class="main-header">
+        <a href="home.html">
+            <div class="logo">
+                <span class="logo-script">Brown's</span>
+                <span class="logo-sub">BOUTIQUE</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <ul>
+                <li class="dropdown active">
+                    <a href="#">Peanuts <i class="fas fa-chevron-down icon-small"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="peluchessnoopy.html">Peluches</a></li> 
+                        <li><a href="vajillassnoopy.html">Vajillas</a></li>
+                        <li><a href="bolsasymochilassnoopy.html">Bolsas y mochilas</a></li>
+                        <li><a href="figurassnoopy.html">Figuras</a></li>
+                        <li><a href="novedadessnoopy.html">Novedades</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Películas y Series <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="disney.html">Disney</a></li>
+                        <li><a href="funkopop.html">Funko Pop</a></li>
+                        <li><a href="monsterhigh.html">Monster High</a></li>
+                        <li><a href="harrypotter.html">Harry Potter</a></li>
+                    </ul>
+                </li>
+                <li><a href="prendas.html">Prendas</a></li>
+                <li><a href="anime.html">Anime</a></li>
+            </ul>
+        </nav>
+
+        <!-- Iconos en el Header -->
+        <div class="header-icons">
+            <div id="search-container" class="search-container">
+                <form id="search-form" action="#" style="display: flex; align-items: center; margin: 0; padding: 0; width: 100%;">
+                    <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
+                    <button type="submit" id="btn-search" class="icon-btn-search" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Bolsita de compras superior con contador -->
+            <a href="#" id="btn-cart" class="cart-icon" aria-label="Carrito">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count" class="cart-badge">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Botón flotante en la esquina inferior derecha -->
+<div id="floating-cart" class="floating-cart-btn" title="Ver mi carrito">
+    <i class="fas fa-shopping-bag"></i>
+    <span id="floating-cart-count" class="floating-cart-badge">0</span>
+</div>
+
+<!-- Superposición oscura y Panel Lateral del Carrito -->
+<div id="cart-overlay" class="cart-overlay"></div>
+<aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <!-- Renglón alineado para el título y la X -->
+        <div class="cart-title-row">
+            <h2><i class="fas fa-shopping-bag"></i> Tu Carrito</h2>
+            <button id="close-cart" class="close-cart-btn">&times;</button>
+        </div>
+
+        <!-- Pestañas de selección: Apartar o Pagar -->
+        <div class="cart-tabs-nav" data-active="apartar">
+            <button type="button" class="cart-tab-btn active" data-tab="apartar">Apartar</button>
+            <button type="button" class="cart-tab-btn" data-tab="pagar">Pagar</button>
+            <div class="cart-tab-indicator"></div>
+        </div>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+        <p class="cart-empty-msg">Tu carrito está vacío</p>
+    </div>
+
+<div class="cart-footer">
+  <!-- Lista de productos -->
+  <div class="cart-items" id="cart-items"></div>
+  
+  <!-- Totales y Botón -->
+  <div class="cart-totals">
+    <div class="cart-total-row">
+      <span>Total:</span>
+      <span id="cart-total-price">$0.00 MXN</span>
+    </div>
+    
+    <!-- Única línea de apartado sugerido -->
+    <div class="cart-total-row cart-apartado-row">
+      <span>Apartado sugerido ($100 c/u):</span>
+      <span id="cart-apartado-price">$0.00 MXN</span>
+    </div>
+
+    <button id="btn-checkout-whatsapp" class="btn-whatsapp">
+      <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+    </button>
+  </div>
+</div>
+</aside>
+
+</body>
+</html>

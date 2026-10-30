@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brown's Boutique - Home</title>
+  
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tipografías Montserrat, Playfair Display y Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="CSS/home.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="hero-section">
+    <div class="hero-container">
+      
+      <!-- Columna 1: Textos y Botones -->
+      <div class="hero-content">
+        <span class="subheading">
+          <i class="fa-regular fa-heart"></i> TU TIENDA DE
+        </span>
+        <h1 class="hero-title">
+          personajes<br>favoritos
+        </h1>
+        <p class="hero-description">
+          Productos originales de Peanuts, películas, series y más. Descubre, encarga y sorprende con algo único.
+        </p>
+        <div class="hero-buttons">
+          <a href="#catalogo" class="btn-hero-primary">VER CATÁLOGO</a>
+          <a href="#peanuts" id="btn-peanuts" class="btn btn-secondary">
+            <i class="fa-regular fa-heart"></i> PEANUTS
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Ilustración de Peanuts -->
+      <div class="hero-image-wrapper">
+        <img src="imagenes/peanuts.png" alt="Charlie Brown, Woodstock y Snoopy" class="hero-img">
+        
+        <!-- Insignia flotante a la derecha arriba -->
+        <div class="badge-discount">
+          <span>Nuevos</span>
+          <strong>productos</strong>
+          <span>cada semana</span>
+          <i class="fa-solid fa-heart badge-heart"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra Inferior de Beneficios -->
+    <div class="features-bar">
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <div class="feature-text">
+          <strong>Productos</strong>
+          <span>100% originales</span>
+        </div>
+      </div>
+
+      <div class="feature-divider"></div>
+
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="fa-solid fa-box-open"></i>
+        </div>
+        <div class="feature-text">
+          <strong>Encarga productos</strong>
+          <span>agotados</span>
+        </div>
+      </div>
+
+      <div class="feature-divider"></div>
+
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="fa-solid fa-tag"></i>
+        </div>
+        <div class="feature-text">
+          <strong>Nuevos lanzamientos</strong>
+          <span>y ediciones limitadas</span>
+        </div>
+      </div>
+
+      <div class="feature-divider"></div>
+
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="feature-text">
+          <strong>Envíos a Zacatlán</strong>
+          <span>y alrededores</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SECCIÓN DE PRODUCTOS (CATÁLOGO / MENÚ) - Con id="catalogo" para recepción del botón -->
+  <section id="catalogo" class="catalogo-section">
+    <div class="catalogo-container">
+      <div class="catalogo-header">
+        <span class="subheading"><i class="fa-regular fa-star"></i> DESTACADOS DE LA SEMANA</span>
+        <h2>Nuestras mejores franquicias cobran vida</h2>
+      </div>
+
+      <!-- Contenedor vacío donde JavaScript inyectará los productos de la base de datos -->
+      <div class="productos-grid" id="productos-container">
+        <!-- Los productos cargarán automáticamente aquí -->
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="scripts/componentes.js"></script>
+  <!-- Script para conectar y cargar los productos de Google Sheets -->
+  <script src="scripts/catalogo.js"></script>
+  <script src="scripts/carrito.js"></script>
+</body>
+</html>

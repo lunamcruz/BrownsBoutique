@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peluches | Brown's Boutique</title>
+  <link rel="stylesheet" href="css/peluchessnoopy.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+
+  <script src="scripts/componentes.js"></script>
+</head>
+
+<header>
+    <div id="header"></div>
+</header>
+
+<body>
+
+  <!-- Sección principal del catálogo -->
+  <main class="catalog-container">
+    <!-- Barra de control y ordenamiento -->
+    <div class="catalog-bar">
+      <p id="product-count" class="product-count">Cargando productos...</p>
+      <div class="sort-box">
+        <label for="sort-select">Ordenar por:</label>
+        <select id="sort-select">
+          <option value="default">Destacados</option>
+          <option value="price-asc">Precio: Menor a Mayor</option>
+          <option value="price-desc">Precio: Mayor a Menor</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Rejilla donde se insertarán los productos desde Google Sheets -->
+    <div id="products-grid" class="products-grid">
+      <!-- Indicador de carga -->
+      <div class="loading-spinner">
+        <p>Cargando catálogo desde Google Sheets...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contenedor donde tu script general carga el Footer -->
+  <div id="footer-container"></div>
+
+<script>const HOJA_ACTUAL = "Harry Potter";</script>
+<script src="scripts/catalogo-universal.js"></script>
+<script src="scripts/carrito.js"></script>
+</body>
+
+<footer>
+    <div id="footer"></div>
+</footer>
+
+</html>

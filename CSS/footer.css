@@ -1,0 +1,211 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos del Footer Principal */
+.site-footer {
+  background-color: #fbc02d; /* Fondo amarillo */
+  color: #111111;
+  padding: 50px 20px 20px 20px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+/* Logo con Dancing Script idéntico al header */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.logo-script {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #111111;
+  line-height: 0.9;
+}
+
+.logo-sub {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #111111;
+  margin-top: 2px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #111111;
+  color: #fbc02d;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Secciones */
+.footer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111111;
+}
+
+.footer-links, .contact-info {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 0.88rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+  color: #222222;
+}
+
+.contact-info i {
+  font-size: 0.95rem;
+  color: #111111;
+  width: 16px;
+}
+
+/* Métodos de Pago */
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 160px;
+}
+
+.pay-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  min-width: 38px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: #1a1f71;
+}
+
+.pay-card.visa {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.pay-card.mc, .pay-card.mc-2 {
+  position: relative;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circle.red {
+  background-color: #eb001b;
+  margin-right: -4px;
+}
+
+.circle.orange {
+  background-color: #FFF100;
+}
+
+.pay-card.paypal {
+  color: #003087;
+  font-size: 1rem;
+}
+
+.pay-card.apple-pay {
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+.pay-card.pay-badge {
+  background-color: #0070ba;
+  color: #ffffff;
+  font-size: 0.7rem;
+  border-radius: 12px;
+  padding: 2px 10px;
+}
+
+/* Footer Inferior */
+.footer-bottom {
+  max-width: 1100px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #111111;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #222222;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
